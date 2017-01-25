@@ -1,6 +1,5 @@
 import Inferno from 'inferno'
 import { Route } from 'inferno-router'
-
 import Home from './Home';
 import Layout from '../tags/Layout';
 import Blog from './Blog';
