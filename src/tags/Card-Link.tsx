@@ -1,8 +1,26 @@
 import Inferno from 'inferno';
 import { Link } from 'inferno-router';
+import styled from 'styled-components';
+
+const CardLink = styled(Link)`
+cursor: pointer;
+text-decoration: none;
+margin: 0 1em 0 1em;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+text-align: center;
+border-radius: 3px;
+
+> strong, em {
+display: block;
+}
+> em {
+font-size: 85%;
+padding-left: 1em;
+}
+`;
 
 export default function (props) {
-	return (
-		<Link to={ props.to } className="card">{ props.children }</Link>
-	)
+  return (
+    <CardLink to={ props.to } className="card">{ props.children }</CardLink>
+  )
 };

@@ -21,16 +21,7 @@ align-content: flex-end;
 -webkit-padding-start: 0px;
 padding: 0;
 margin: 0;
-`;
-
-const Title = styled(Link)`
-float: left;
-margin: 0;
-padding: 0 1em 0 1em;
-font-size: 24px;
-line-height: $header-height;
-font-weight: 400;
-color: white;
+background: #660033;
 `;
 
 const Nav = styled.nav`
@@ -38,16 +29,35 @@ float: right;
 border-radius: 10px;
 `;
 
+const Title = styled(Link)`
+float: left;
+padding: 0 1em 0 1em;
+font-size: 24px;
+line-height: $header-height;
+font-weight: 400;
+color: white;
+text-decoration: none;
+background: #b30047;
+
+`;
+
 const Nlink = styled(Link)`
-background: papayawhip;
+background: #b30047;
 padding: 0 10px 0 10px;
 margin: 0 10px 0 10px;
-font-size: 22px;
-border-radius: 5px;
--webkit-border-radius: 5px;
--moz-border-radius: 5px;
--ms-border-radius: 5px;
-border-radius: 5px;
+font-size: 1.3em;
+border-radius: 3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-ms-border-radius: 3px;
+border-radius: 3px;
+color: white;
+text-decoration: none;
+
+&:hover {
+background: #ff4d4d;
+}
+
 `;
 
 export default function () {
@@ -55,7 +65,6 @@ export default function () {
     <Header>
     <Title to="/">Nightshell</Title>
     <Nav>
-    <Nlink to="/">Home</Nlink>
     <Nlink to="/blog">Blog</Nlink>
     <Nlink to="/about">About</Nlink>
     </Nav>

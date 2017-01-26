@@ -14,7 +14,7 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 
 const METADATA = {
-  title: 'Nightshell: Silicon Magi',
+  title: 'Nightshell',
   baseUrl: '/',
 };
 
