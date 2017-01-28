@@ -31,8 +31,7 @@ module.exports = function (options) {
         'inferno-mobx',
         'styled-components',
         'mobx',
-        'history',
-        'normalize.css'
+        'history'
       ],
     },
     // Add alias for compat testing
@@ -81,6 +80,12 @@ module.exports = function (options) {
           test: /\.(jpg|png|gif)$/,
           use: 'file-loader'
         },
+        {
+          test: /\.svg?$/,
+          loader: 'svg-sprite-loader!svgo-loader',
+          include: [helpers.root('src/icons')]
+        },
+
       ],
     },
     plugins: [

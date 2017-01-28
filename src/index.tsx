@@ -1,9 +1,9 @@
 // This is the entry point for our client-side logic
+import createHistory from 'history/createHashHistory';
 import Inferno from 'inferno';
 import { Provider } from 'inferno-mobx';
 import { observable } from 'mobx';
 import { Router } from 'inferno-router';
-import createHistory from 'history/createHashHistory';
 import views from './views';
 import Test from './stores/test';
 
@@ -12,9 +12,12 @@ const app = document.getElementById('app');
 const history = createHistory();
 const stores = { Test };
 
-Inferno.render(
+const App = () => (
   <Provider {...stores }>
-  <Router history={ history }>
-  { views }
+  <Router history={history}>
+  {views}
   </Router>
-  </Provider>, app)
+  </Provider>
+)
+
+Inferno.render(<App/>, app);

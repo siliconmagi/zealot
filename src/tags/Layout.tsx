@@ -21,19 +21,14 @@ color: #ff8080;
 }
 `;
 
-const Wrapper = styled.section`
-background: #BF0040;
-`;
 
 export default class Layout extends Component<MyProps, MyState> {
   render({ children }) {
     return (
-      <Wrapper>
       <div>
       <Header/>
       {children}
       </div>
-      </Wrapper>
     );
   }
 }

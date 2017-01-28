@@ -1,3 +1,9 @@
+# config file
+/src/config.ts
+
+# alm file
+.alm
+
 # Logs
 logs
 *.log

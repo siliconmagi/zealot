@@ -1,6 +1,7 @@
 import Inferno from 'inferno';
 import { Link } from 'inferno-router';
 import styled from 'styled-components';
+import Icon from '../tags/Icon';
 
 const Header = styled.header`
 list-style: none;
@@ -32,19 +33,23 @@ border-radius: 10px;
 const Title = styled(Link)`
 float: left;
 padding: 0 1em 0 1em;
+margin: 0 .5em 0 0;
 font-size: 24px;
 line-height: $header-height;
 font-weight: 400;
 color: white;
 text-decoration: none;
 background: #b30047;
+&:hover {
+background: #ff4d4d;
+}
 
 `;
 
 const Nlink = styled(Link)`
 background: #b30047;
-padding: 0 10px 0 10px;
-margin: 0 10px 0 10px;
+padding: 0 .5em 0 .5em;
+margin: 0 .5em 0 0;
 font-size: 1.3em;
 border-radius: 3px;
 -webkit-border-radius: 3px;

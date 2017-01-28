@@ -64,8 +64,7 @@ module.exports = function (options) {
         'inferno-mobx',
         'styled-components',
         'mobx',
-        'history',
-        'normalize.css'
+        'history'
       ]
         },
         dllDir: helpers.root('dll'),
