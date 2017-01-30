@@ -8,7 +8,7 @@ export default function(props) {
     <div className="page page__home">
     <Card>
     <h1>Home</h1>
-    <p>Please Login</p>
+    <p>Login here</p>
     <SignUpForm></SignUpForm>
     </Card>
     </div>

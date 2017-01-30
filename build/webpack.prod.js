@@ -10,7 +10,7 @@ const WebpackMd5Hash = require('webpack-md5-hash');
 const V8LazyParseWebpackPlugin = require('v8-lazy-parse-webpack-plugin');
 const OptimizeJsPlugin = require('optimize-js-plugin');
 
-const ENV = process.env.NODE_ENV = process.env.ENV = 'production'; 
+const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 8080;
 const METADATA = webpackMerge(commonConfig({env: ENV}).metadata, {
@@ -47,13 +47,14 @@ module.exports = function (env) {
           }),
           include: [helpers.root('src', 'styles')]
         },
+        
       ]
     },
     plugins: [
-      // extra kb prod build
-      // new OptimizeJsPlugin({
-        // sourceMap: false
-      // }),
+      new OptimizeJsPlugin({
+        sourceMap: false
+      }),
+      // new V8LazyParseWebpackPlugin(),
       new ExtractTextPlugin('[name].[contenthash].css'),
       new DefinePlugin({
         'ENV': JSON.stringify(METADATA.ENV),

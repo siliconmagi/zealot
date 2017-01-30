@@ -8,7 +8,6 @@ import {
 } from 'amazon-cognito-identity-js';
 import { CognitoIdentityCredentials, Config } from 'aws-sdk';
 
-
 interface MyProps {}
 interface MyState {}
 
