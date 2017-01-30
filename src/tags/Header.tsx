@@ -41,7 +41,7 @@ color: white;
 text-decoration: none;
 background: #b30047;
 &:hover {
-background: #ff4d4d;
+background: #cc3399;
 }
 
 `;
@@ -60,7 +60,7 @@ color: white;
 text-decoration: none;
 
 &:hover {
-background: #ff4d4d;
+background: #cc3399;
 }
 
 `;

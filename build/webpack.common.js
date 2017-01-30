@@ -23,16 +23,6 @@ module.exports = function (options) {
   return {
     entry: {
       'main': './src/index.tsx',
-      vendor: [
-        'inferno',
-        'inferno-router',
-        'inferno-component',
-        'inferno-compat',
-        'inferno-mobx',
-        'styled-components',
-        'mobx',
-        'history'
-      ],
     },
     // Add alias for compat testing
     resolve: {
@@ -50,8 +40,8 @@ module.exports = function (options) {
           use: [{
             loader: 'babel-loader',
             options: {
-              presets: [['es2015', { modules: false }], 'stage-3'],
-              plugins: [['inferno', {"imports": true}]],
+              presets: [['es2015', { "modules": false }], 'stage-3'],
+              plugins: [['inferno', { "imports": true}]],
             },
           }, {
             loader: 'awesome-typescript-loader?{configFileName: "tsconfig.webpack.json"}',

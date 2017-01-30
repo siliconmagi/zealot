@@ -46,26 +46,27 @@ module.exports = function (options) {
         },
       ]
     },
-//Loader options testing
+    //Loader options testing
     plugins: [
       new DefinePlugin({
         'ENV': JSON.stringify(METADATA.ENV),
         'process.env': {
           'ENV': JSON.stringify(METADATA.ENV),
+          'NODE_ENV': JSON.stringify(METADATA.ENV),
         }
       }),
       new DllBundlesPlugin({
         bundles: {
           vendor: [
-        'inferno',
-        'inferno-router',
-        'inferno-component',
-        'inferno-compat',
-        'inferno-mobx',
-        'styled-components',
-        'mobx',
-        'history'
-      ]
+            'inferno',
+            'inferno-router',
+            'inferno-component',
+            'inferno-compat',
+            'inferno-mobx',
+            'styled-components',
+            'mobx',
+            'history'
+          ]
         },
         dllDir: helpers.root('dll'),
         webpackConfig: webpackMergeDll(commonConfig({env: ENV}), {
@@ -77,10 +78,10 @@ module.exports = function (options) {
         { filepath: helpers.root(`dll/${DllBundlesPlugin.resolveFile('vendor')}`) }
       ]),
       new LoaderOptionsPlugin({
-          debug: true,
-          options: {
+        debug: true,
+        options: {
 
-          }
+        }
       }),
     ],
     devServer: {

@@ -13,11 +13,20 @@ const history = createHistory();
 const stores = { Test };
 
 const App = () => (
-  <Provider {...stores }>
+  <Provider {...stores}>
   <Router history={history}>
   {views}
   </Router>
   </Provider>
 )
 
-Inferno.render(<App/>, app);
+if ('production' === process.env.ENV) {} else
+  {
+    const hmr: any = module;
+    if (hmr.hot) {
+      hmr.hot.accept();
+      require('inferno-devtools');
+    }
+  }
+
+  Inferno.render(<App/>, app);
